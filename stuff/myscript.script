@@ -1,0 +1,13 @@
+#just some REALLY simple stuff
+#alloc an amount
+#realloc to make it bigger, it won't go at end, but it will have extra space to make header
+#realloc to shrink it, when it puts in a new header after shrunken paylod it won't merge anything
+a 1 60
+a 2 16
+a 3 800
+a 4 16
+#now there are 800 bytes free
+f 3
+#this ensures the 800B spot is free_head, just trust me
+a 5 16
+r 1 400
